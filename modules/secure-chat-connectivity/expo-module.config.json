@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android", "web"],
+  "apple": {
+    "modules": ["SecureChatConnectivityModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.securechatconnectivity.SecureChatConnectivityModule"]
+  }
+}

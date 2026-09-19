@@ -1,0 +1,46 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [
+    "db",
+    "server",
+    "user"
+  ],
+  "dev_command": "pnpm run dev",
+  "env_vars": {
+    "DATABASE_URL": "mysql://3r9vVATcFtZbdyd.root:B4jTo573jvCx1GeiqlC9@gateway04.us-east-1.prod.aws.tidbcloud.com:4000/QAZEZEJSvjcNw3pT9w7hTV?ssl={\"rejectUnauthorized\":true}"
+  },
+  "experiments": [
+    "no_db_push"
+  ],
+  "git_remote": {
+    "repo_url": "https://7f0548f6b28a1758d9bf7be630d36cb4.artifacts.cloudflare.net/git/prod/qazezejsvjcnw3pt9w7htv.git",
+    "expiration": "2026-09-20T00:53:45.643Z",
+    "token": "art_v2_x_ca78cbfeffdb4af47108518b6579e6d5e837f861?expires=1789865625",
+    "backend": "GIT_BACKEND_ARTIFACTS"
+  },
+  "name": "secure-chat",
+  "path": "/home/ubuntu/secure-chat",
+  "port": 3000,
+  "secrets": {
+    "BUILT_IN_FORGE_API_KEY": "GTnmshDkQKWPwYdk9PyGD7",
+    "BUILT_IN_FORGE_API_URL": "https://forge.manus.ai",
+    "EXPO_APP_QR_URL": "exps://8081-ie2borlkuunk3md2qcbzh-9711735e.sg2.manus.computer",
+    "EXPO_PACKAGER_PROXY_URL": "https://8081-ie2borlkuunk3md2qcbzh-9711735e.sg2.manus.computer",
+    "EXPO_PUBLIC_API_BASE_URL": "https://3000-ie2borlkuunk3md2qcbzh-9711735e.sg2.manus.computer",
+    "JWT_SECRET": "cjmoyF2bX6QzP5jim83Kee",
+    "OAUTH_SERVER_URL": "https://api.manus.im",
+    "OWNER_NAME": "Fouad Sayed",
+    "OWNER_OPEN_ID": "fA3yfwiTZUjvmq2tEySpUV",
+    "REACT_NATIVE_PACKAGER_HOSTNAME": "8081-ie2borlkuunk3md2qcbzh-9711735e.sg2.manus.computer",
+    "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
+    "VITE_ANALYTICS_WEBSITE_ID": "e64d489f-25c4-4804-ad2e-b7379fdb3861",
+    "VITE_APP_ID": "QAZEZEJSvjcNw3pT9w7hTV",
+    "VITE_APP_LOGO": "https://files.manuscdn.com/user_upload_by_module/session_file/310519663934588443/ySlLhPzknoLcKBnX.png",
+    "VITE_APP_TITLE": "Secure Chat",
+    "VITE_FRONTEND_FORGE_API_KEY": "Xk8AkJ8z93BdXMvddVXBiu",
+    "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
+    "VITE_OAUTH_PORTAL_URL": "https://manus.im"
+  },
+  "template_id": "app",
+  "test_command": "pnpm test"
+}
