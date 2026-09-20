@@ -24,7 +24,7 @@ jobs:
       - name: Accept Android Licenses
         run: |
           yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
-          $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "platforms;android-34" "build-tools;34.0.0" "platform-tools"
+          $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "platforms;android-34" "build-tools;34.0.0" "platform-tools" "ndk;27.1.12297006"
 
       - name: Setup pnpm
         run: |
@@ -32,15 +32,22 @@ jobs:
           corepack prepare pnpm@9.12.0 --activate
 
       - name: Install deps
-        run: pnpm install
+        env:
+          CI: false
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build APK
+        env:
+          NODE_ENV: production
+          EXPO_NO_DOTENV: 1
+          GRADLE_OPTS: -Dorg.gradle.jvmargs="-Xmx4g -XX:MaxMetaspaceSize=2g"
         run: |
           cd android
           chmod +x gradlew
-          ./gradlew assembleDebug --no-daemon
+          ./gradlew assembleDebug --no-daemon --stacktrace
 
       - name: Upload APK
+        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: secure-chat-apk
